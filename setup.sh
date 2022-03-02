@@ -27,21 +27,7 @@ red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ipinfo.io/ip);
-if
 clear
-echo -e "${green} ORAIT, IP VPS SUDAH DI KEY IN...${NC}"
-sleep 5
-else
-clear
-echo "sila contact admin untuk premium"
-echo '                     JOY SMARK..                           '
-echo '                                                          '
-echo '                                                          '
-echo '                                                          '
-echo '                  AutoScript BY JOYSMARK VPN                   '
-echo '                  Telegram t.me/joysmark                   '
-sleep 20
-exit 0
 fi
 echo '============================================='
 echo '          Sila Tunggu sebentar '
