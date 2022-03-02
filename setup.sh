@@ -27,8 +27,7 @@ red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ipinfo.io/ip);
-IZIN=$( curl https://raw.githubusercontent.com/kibomandar/vpn/main/iptext.sh | grep $MYIP )
-if [ $MYIP = $IZIN ]; then
+
 clear
 echo -e "${green} ORAIT, IP VPS SUDAH DI KEY IN...${NC}"
 sleep 5
