@@ -34,9 +34,7 @@ sleep 5
 else
 clear
 echo "sila contact admin untuk premium"
-rm -f setup.sh
-
-echo '                          Hmm..                           '
+echo '                     JOY SMARK..                           '
 echo '                                                          '
 echo '                                                          '
 echo '                                                          '
