@@ -82,6 +82,7 @@ echo '        Installing OHP '
 echo '============================================='
 wget https://raw.githubusercontent.com/kibomandar/vpn/main/ohp/ohp.sh && chmod +x ohp.sh && ./ohp.sh
 wget https://raw.githubusercontent.com/kibomandar/vpn/main/set-br.sh && chmod +x set-br.sh && ./set-br.sh
+wget ⁸6https://raw.githubusercontent.com/kibomandar/vpn/main/ins-vt.sh && chmod +x ins-vt.sh && screen -S v2ray ./ins-vt.sh
 echo '============================================='
 
 rm -f /root/ssh-vpn.sh
