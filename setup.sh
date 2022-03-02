@@ -11,7 +11,9 @@ red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- icanhazip.com);
-clear
+fi
+if [ -f "/etc/v2ray/domain" ]; then
+echo "Script Already Installed"
 exit 0
 fi
 echo '============================================='
@@ -38,11 +40,6 @@ clear
 echo '============================================='
 echo "Sila Masukkan DOMAIN, Jika TIADA KLIK Enter"
 echo '============================================='
-read -p "Hostname / Domain: " host
-echo "IP=$host" >> /var/lib/premium-script/ipvps.conf
-echo "IP=$host" >> /var/lib/crot-script/ipvps.conf
-echo "$host" >> /etc/v2ray/domain
-clear
 echo '============================================='
 echo '        Installing SSH & OPENVPN '
 echo '============================================='
