@@ -32,11 +32,6 @@ echo '============================================='
 echo '        Process Seterusnya Sila Tunggu '
 echo '============================================='
 sleep 2
-mkdir /etc/v2ray
-mkdir /etc/xray
-mkdir /var/lib/premium-script;
-mkdir /var/lib/crot-script;
-clear
 echo '============================================='
 echo "Sila Masukkan DOMAIN, Jika TIADA KLIK Enter"
 echo '============================================='
