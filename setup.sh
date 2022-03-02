@@ -15,13 +15,37 @@ apt -y install wget curl
 
 sleep 5
 clear
+if [ "${EUID}" -ne 0 ]; then
+		echo "You need to run this script as root"
+		exit 1
+fi
+if [ "$(systemd-detect-virt)" == "openvz" ]; then
+		echo "OpenVZ is not supported"
+		exit 1
 fi
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ipinfo.io/ip);
-fi
+IZIN=$( curl https://raw.githubusercontent.com/kibomandar/vpn/main/iptext.sh | grep $MYIP )
+if [ $MYIP = $IZIN ]; then
 clear
+echo -e "${green} ORAIT, IP VPS SUDAH DI KEY IN...${NC}"
+sleep 5
+else
+clear
+echo "sila contact admin untuk premium"
+rm -f setup.sh
+
+echo '                          Hmm..                           '
+echo '                                                          '
+echo '                                                          '
+echo '                                                          '
+echo '                  AutoScript BY BotVPN                   '
+echo '                  Telegram t.me/onepiecevpncrew                   '
+sleep 20
+exit 0
+fi
 echo '============================================='
 echo '          Sila Tunggu sebentar '
 echo 'Process Update & Upgrade Sedang Dijalankan '
@@ -107,7 +131,7 @@ rm -f /root/nf
 echo "1.1" > /home/ver
 
 echo "echo '      ꧁DEAR MY LOVE ,Hanya kerna sekali dikhianati꧂             '" >> .profile
-echo "echo '          ꧁Aku Menjadi Tak Kenal Apa itu janda꧂                 '" >> .profile
+echo "echo '          ꧁Aku Menjadi Tak Kenal Apa itu Cinta꧂                 '" >> .profile
 clear
 echo " "
 echo '============================================='
@@ -174,8 +198,8 @@ echo "   - White Label" | tee -a log-install.txt
 echo "   - Installation Log --> /root/log-install.txt"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo ""
-echo "   - 1st Dev/Main            : JoySmark"  | tee -a log-install.txt
-echo "   - Telegram                : t.me/joysmark"  | tee -a log-install.txt
+echo "   - 1st Dev/Main            : BOTVPN"  | tee -a log-install.txt
+echo "   - Telegram                : t.me/onepiecevpncrew"  | tee -a log-install.txt
 echo ""
 
 sleep 3
