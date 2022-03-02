@@ -15,11 +15,11 @@ apt -y install wget curl
 
 sleep 5
 clear
-if [ "${EUID}" -ne 0 ]; then
+fi [ "${EUID}" -ne 0 ]; then
 		echo "You need to run this script as root"
 		exit 1
 fi
-if [ "$(systemd-detect-virt)" == "openvz" ]; then
+fi [ "$(systemd-detect-virt)" == "openvz" ]; then
 		echo "OpenVZ is not supported"
 		exit 1
 fi
