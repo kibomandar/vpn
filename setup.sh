@@ -27,22 +27,8 @@ red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ipinfo.io/ip);
-
-clear
-echo -e "${green} ORAIT, IP VPS SUDAH DI KEY IN...${NC}"
-sleep 5
-else
-clear
-echo "sila contact admin untuk premium"
 rm -f setup.sh
-
-echo '                          Hmm..                           '
-echo '                                                          '
-echo '                                                          '
-echo '                                                          '
-echo '                  AutoScript BY BotVPN                   '
-echo '                  Telegram t.me/onepiecevpncrew                   '
-sleep 20
+clear
 exit 0
 fi
 echo '============================================='
