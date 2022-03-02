@@ -1,20 +1,4 @@
 #!/bin/bash
-
-# install text 
-apt update -y
-apt upgrade -y
-apt dist-upgrade -y
-
-# install python
-apt -y install ruby
-gem install lolcat
-apt -y install figlet
-
-# install wget and curl
-apt -y install wget curl
-
-sleep 5
-clear
 if [ "${EUID}" -ne 0 ]; then
 		echo "You need to run this script as root"
 		exit 1
@@ -22,11 +6,25 @@ fi
 if [ "$(systemd-detect-virt)" == "openvz" ]; then
 		echo "OpenVZ is not supported"
 		exit 1
-
+fi
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
-MYIP=$(wget -qO- ipinfo.io/ip);
+MYIP=$(wget -qO- ipv4.wildyproject.com);
+echo "Script By JoySmart"
+clear
+if [ -f "/etc/v2ray/domain" ]; then
+echo "Script Already Installed"
+exit 0
+fi
+
+# MengInstall SSH
+export DEBIAN_FRONTEND=noninteractive
+MYIP=$(wget -qO- ipv4.wildyproject.com);
+MYIP2="s/xxxxxxxxx/$MYIP/g";
+NET=$(ip -o $ANU -4 route show to default | awk '{print $5}');
+source /etc/os-release
+ver=$VERSION_ID
 
 clear
 echo '============================================='
